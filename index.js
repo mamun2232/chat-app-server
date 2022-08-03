@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const http = require("http");
 const { Server } = require("socket.io");
-
+const port = process.env.PORT || 5001
 // route hendeler
 const userHender = require("./router/userHandeler");
 const Message = require("./mongoose-model/messageModel");
@@ -66,6 +66,6 @@ io.on("connection", (socket) => {
 // router
 app.use("/user", userHender);
 
-expressServer.listen(5001, () => {
+expressServer.listen(port, () => {
   console.log("server stat was 5001 port");
 });
