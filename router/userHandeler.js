@@ -74,4 +74,7 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get('/server' , (req , res) => {
+  res.send("hellow baggladhs")
+})
 module.exports = router;
