@@ -11,7 +11,7 @@ const Message = require("./mongoose-model/messageModel");
 // server config
 const app = express();
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: "https://bucolic-bunny-0d1f80.netlify.app"
 }))
 app.use(express.json());
 const expressServer = http.createServer(app);
@@ -31,7 +31,7 @@ mongoose
 // Socket server
 const io = new Server(expressServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://bucolic-bunny-0d1f80.netlify.app",
     methods: ["get", "post"],
   },
 });
